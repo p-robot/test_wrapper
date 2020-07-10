@@ -26,4 +26,8 @@ jobs:
       run: |
         pip install numpy matplotlib
         python print_numbers.py
-
+    - name: Upload figure
+      uses: actions/upload-artifact@v1
+      with:
+        name: Figure
+        path: test.png
