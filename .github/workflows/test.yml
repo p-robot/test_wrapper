@@ -20,5 +20,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: New file
-        path: newfile.txt
+        path: '$HOME/newfile.txt'
 
