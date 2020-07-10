@@ -21,4 +21,8 @@ jobs:
       with:
         name: New file
         path: newfile.txt
+    - name: Print some numbers from numpy
+      shell: bash
+      run: |
+        python print_numbers.py
 
