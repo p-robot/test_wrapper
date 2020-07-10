@@ -24,7 +24,7 @@ jobs:
     - name: Print some numbers from numpy
       shell: bash
       run: |
-        pip install numpy matplotlib
+        pip install numpy python-tk python3-tk matplotlib
         python print_numbers.py
     - name: Upload figure
       uses: actions/upload-artifact@v1
