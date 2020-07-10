@@ -1,4 +1,4 @@
-name: Saver
+name: Save figures
 
 on:
   push:
@@ -24,7 +24,8 @@ jobs:
     - name: Print some numbers from numpy
       shell: bash
       run: |
-        pip install numpy python3-tk matplotlib
+        apt-get update -qqy && apt-get install -qqy make clang curl gcc g++ 
+        python3.7 -m pip install numpy pandas scipy python3-tk matplotlib
         python print_numbers.py
     - name: Upload figure
       uses: actions/upload-artifact@v1
