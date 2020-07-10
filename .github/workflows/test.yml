@@ -25,7 +25,7 @@ jobs:
       shell: bash
       run: |
         apt-get update -qqy && apt-get install -qqy make clang curl gcc g++ 
-        python -m pip install numpy pandas scipy python3-tk matplotlib
+        python -m pip install numpy pandas scipy
         python print_numbers.py
     - name: Upload figure
       uses: actions/upload-artifact@v1
