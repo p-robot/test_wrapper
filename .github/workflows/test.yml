@@ -1,0 +1,19 @@
+name: Saver
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build container
+      run:  docker build --tag test -f Dockerfile .
+    - name: run tests
+      run: docker run test
+
