@@ -16,6 +16,7 @@ jobs:
     - name: Make new file
       run: |
         touch newfile.txt
+    - name: Upload file
       uses: actions/upload-artifact@v1
       with:
         name: New file
