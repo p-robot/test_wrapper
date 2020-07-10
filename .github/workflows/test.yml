@@ -11,14 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - name: Make new file
       run: |
         mkdir output_files
         echo "Good stuff!" > output_files/newfile.txt
-    - name: Print some numbers from numpy
-      uses: actions/setup-python@v2
+    - uses: actions/setup-python@v2
       with:
         python-version: '3.x'
         architecture: x64
