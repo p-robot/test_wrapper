@@ -17,8 +17,8 @@ jobs:
         python-version: "3.8"
     - name: Make new file
       run: |
-        mkdir output_files
-        echo "Good stuff!" > output_files/newfile.txt
+        mkdir output_file
+        echo "Good stuff!" > output_file/newfile.txt
     - name: Run numpy
       run: |
         python -m pip install numpy pandas scipy
