@@ -16,4 +16,9 @@ jobs:
       run:  docker build --tag test -f Dockerfile .
     - name: run tests
       run: docker run test
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v1
+      with:
+        name: New file
+        path: newfile.txt
 
