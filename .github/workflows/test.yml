@@ -24,6 +24,6 @@ jobs:
     - name: Print some numbers from numpy
       shell: bash
       run: |
-        pip install numpy
+        pip install numpy matplotlib
         python print_numbers.py
 
