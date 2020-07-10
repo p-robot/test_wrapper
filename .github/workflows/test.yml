@@ -18,10 +18,13 @@ jobs:
         mkdir output_files
         echo "Good stuff!" > output_files/newfile.txt
     - name: Print some numbers from numpy
-      shell: bash
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        architecture: x64
       run: |
-        python3 -m pip install numpy pandas scipy pathlib
-        python3 print_numbers.py
+        python -m pip install numpy pandas scipy
+        python print_numbers.py
     - name: Upload folder
       uses: actions/upload-artifact@v1
       with:
