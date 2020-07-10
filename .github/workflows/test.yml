@@ -20,7 +20,7 @@ jobs:
     - name: Print some numbers from numpy
       shell: bash
       run: |
-        python -m pip install numpy pandas scipy
+        python -m pip install numpy pandas scipy pathlib
         python print_numbers.py
     - name: Upload folder
       uses: actions/upload-artifact@v1
