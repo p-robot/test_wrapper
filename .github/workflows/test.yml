@@ -13,9 +13,6 @@ jobs:
     steps:
     - name: Checkout
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.7'
     - name: Make new file
       run: |
         echo "Good stuff!" > newfile.txt
@@ -27,11 +24,10 @@ jobs:
     - name: Print some numbers from numpy
       shell: bash
       run: |
-        apt-get update -qqy && apt-get install -qqy make clang curl gcc g++ 
-        python -m pip install numpy pandas scipy wheel
+        python -m pip install numpy pandas scipy
         python print_numbers.py
-    - name: Upload figure
+    - name: Upload CSV
       uses: actions/upload-artifact@v1
       with:
-        name: Figure
-        path: test.png
+        name: CSV file
+        path: test.csv
